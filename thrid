@@ -1,0 +1,102 @@
+//객체 메소드 , 프로퍼티
+
+let a ='age';
+const user{
+  name : 'Mike',
+  [a] : 30; //age :30 이 들어감 computed property
+}
+
+const user = {
+  [1+4] : 5,
+  ["안녕"+"하세요"] : 'Hello';
+}
+
+const user = {//처음상태
+  name : 'Mike',
+  age : 30
+}
+
+const cloneUser = user; //x 참조 값만 들어감
+
+//객체 복제
+const newUser = Object.assign({},user);//{}:초기값
+
+Object.assign({gender : 'male'}, user); 
+
+const user = {
+gender : 'male'  
+name : 'Mike',
+  age : 30
+}
+
+Object.assign({name:'Tom'},user);
+const user = {//user로 덮어씀
+  name : 'Mike',
+  age : 30
+}
+
+const user = {
+  name : 'Mike'
+}
+const info1 = {
+  age : 30,
+}
+const info2 = {
+  gender : 'male',
+}
+
+Object.assign(user,info1,info2); // user에 info1,info2 합침
+
+//키 배열 반환
+Object.keys()
+
+const user = { 
+  name : 'Mike',
+  age : 30,
+  gender : 'male',
+}
+
+Object.keys(user); //[name,age,gender]
+
+//값 배열 반환
+Object.values()
+
+const user = { 
+  name : 'Mike',
+  age : 30,
+  gender : 'male',
+}
+
+Object.values(user); //['Mike',30,'male']
+
+//[키,값] 배열 반환
+Object.entries(user);
+
+
+let arr = [
+  ["mon","월"]
+  ["tue","화"]
+];
+//배열을 객체로 만들어줌
+const result = Object.fromEntries(arr);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
