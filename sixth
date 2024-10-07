@@ -1,0 +1,48 @@
+//백틱은 여러줄로 쓸수있다.
+
+let desc = `오늘은
+날이 좋네요.
+내일은 비가옵니다`;
+
+//문자열도 배열처럼 length 메서드로 길이 알수있음
+let desc = '안녕하세요.'
+desc[2] //처럼 요소 반환도 가능 ->하 
+//배열과 다르게 한 글자만 변경은 불가 (변화없음) 
+desc.toUpperCase() , desc.toLowerCase()
+
+indexOf(text);
+//주의점 
+let desc = "Hi guys. Nice to meet you."
+
+if(desc.indexOf('Hi')){
+  console.log('Hi가 포함된 문장입니다.')
+}//false
+
+if(desc.indexOf('Hi')>-1){//중요!!!
+  console.log('Hi가 포함된 문장입니다.')
+}//false
+
+//문자열 슬라이스 n<= x <m 반환
+str.slice(n,m); 
+let desc = "abcdefg";
+desc.slice(2,-2) // "cde"
+
+str.substring(n,m)//n과m사이 문자열 반환. 음수는 0으로 인식 , n,m m,n 바꿔도 가능
+
+str.substr(n,m)//n부터 시작 m개 가져옴
+
+str.trim():앞뒤 공백제거
+repeat(n)//n번 반복
+
+
+
+
+
+
+
+
+
+
+
+
+
