@@ -1,0 +1,24 @@
+//생성자 함수 (첫번째 글자 대문자 관례)
+function User(name,age){
+  //this ={}
+  this.name = name;
+  this.age = age;
+  //return this;
+}
+new 함수명();
+
+let user1 = new User('Mike',30); //객체 생성
+let user2 = new User('Jane',22); //new 키워드
+
+function Item(title, price){
+  this.title=title;
+  this.price=price;
+  this.showPrice = function(){
+    console.log(`가격은 ${price}원 입니다.`);
+  }
+}
+const item1 =  new Item("인형",3000);
+const item2 =  new Item("지갑",4000);
+//만약 new 키워드를 안쓰면 단순 함수호출
+
+item2.showPrice();
