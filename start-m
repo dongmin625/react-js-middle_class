@@ -1,0 +1,30 @@
+//변수
+//let const var
+
+let name = 'Mike';
+let name = 'Jane'; .// 다시선언 불가 error!
+
+
+var name;
+console.log(name);
+name = 'Mike';//위로 끌어올려짐(호이스팅)
+//but 변수(name)만 호이스팅 'Mike'는 그자리에 그대로 
+
+//let과 const는 할당을 받기전 사용불가!
+
+let age =31;
+function showAge(){ //함수 전체가 호이스팅
+  console.log(age);
+  let age =20; //(X)
+}
+showAge();
+
+// var 1. 선언및 초기화 동시 2. 할당
+// let 1.선언단계 2.초기화 단계 3. 할당 단계
+// const 1.선언+초기화+할당 동시에
+
+const age =30;
+if(age>19){
+  var txt = '성인';//var는 함수 밖에서 사용가능(함수 스코프) but let,const는 불가능(블록 스코프)
+}
+console.log(txt);
