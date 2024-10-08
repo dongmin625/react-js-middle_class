@@ -1,0 +1,51 @@
+arr.sort() //배열 재정렬(배열 자체가 변경됨)
+//함수를 전달받을수있음
+
+let arr = [27,8,5,13]
+
+arr.sort((a,b) => {
+  return a-b;
+});
+
+console.log(arr);
+
+//Lodash(라이브러리)
+ _.sortBy(arr);
+
+arr.reduce()
+
+let arr = [1,2,3,4,5];
+
+//for, for of, forEach
+
+let result =0;
+arr.forEach((num) => {
+  result +=num;
+}); //배열순회 더하기
+
+
+const result = arr.reduce((prev, cur)=>{ //(이전누적값,현재값)
+  return prev + cur;
+} ,0) //0:초깃값 if 100 -> 101 -> ...115
+//let arr = [1,2,3,4,5]; 초기값에 1더하고 누적 2더하고 누적... 
+
+console.log(result);
+
+//예시 배열을 받고 빈배열이 초깃값 만약 나이가 19이상 이면 빈배열에 저장
+let result = userList.reduce((prev,cur) =>{
+  if(cur.age>19){
+    prev.push(cur.name);
+  }
+  return prev;
+},[]);
+
+
+
+
+
+
+
+
+
+
+
