@@ -1,0 +1,104 @@
+//상속
+
+const user = {
+  name:'Mike'
+}
+user.hasOwnProperty() // ->있으면 ture 없으면 false
+
+const car = {
+  wheels : 4,
+  drive(){
+    console.log("drive..");
+  },
+};
+
+const bmw = {
+  color : 'red',
+   navigation:1,
+  };
+
+const benz = {
+  color : "black"  
+  };
+
+const audi = {
+color : "blue"  
+};
+
+
+bmw.__proto__=car;// bmw가 car를 상속
+benz.__proto__=car;//car가 benz의 프로토 타입이됨
+audi.__proto__=car;
+
+const x6{
+  color: "white",
+  name:"x6"
+};
+
+x6.__proto__=bmw; // car-bmw-x6 프로토타입 체인
+
+for(p in x6){
+  if(x6.hasOwnProperty(p)){
+     console.log('o',p);
+  }else{
+    console.log('x',p);
+  }
+}
+
+const Bmw = function (color){
+  this.color =color;
+};
+
+Bmw.prototype.wheels =4;//prototype을 사용하면 중복 코드 줄이기 가능
+Bmw.prototype.drive = function(){
+  console.log("dirve..");
+}
+
+Bmw.prototype.navigation =1;
+
+const x6 = new Bmw('red');
+const x4 = new Bmw('blue');
+
+x4.drive(); // "drive.."
+
+x4 instanceof Bmw // ture 반환 한다(bmw의 객체인가?)
+x4.constructor === Bmw; // true 반환(생성자)
+
+Bmw.prototype ={
+  constructor : Bmw,// constructor는 수동으로 명시 해야함 이 방식에서 
+  wheels :4,
+  drive() {
+    console.log('drive..');
+  },
+  navigation:1,
+  stop(){
+  console.log('stop!')
+  }
+};//이런방식은 짧게는 만들수 있으나 비추
+
+//특성들을 못 바꾸게 하는법(클로저)
+const Bmw = function (color){
+  const c = color;//color를 c에 저장
+  this.getColor = function(){//getColor 메서드 정의
+    console.log(c);//c의 값 출력
+  };
+};
+
+const x6 = new Bmw("red");
+x6.getColor(); // ->red
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
