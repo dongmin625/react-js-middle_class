@@ -1,0 +1,85 @@
+//배열 메소드
+arr.splice(n,m); //배열 n번째 요소부터 m개 지움 
+
+arr.splice(n,m,x1,x2); // n번째 요소부터 m개 지우고 그자리에 x1,x2를 추가
+
+arr.splice(1,0,"대한민국","소방관"); //0: 아무것도 지우지 않음 , 인덱스0,1사이에 들어감
+
+let arr = [1,2,3,4,5];
+let result = arr.splice(1,2); //삭제된 배열의 1,2번 인덱스값이 result에 저장됨
+
+arr.slice(n,m); //n <= x < m 인 배열요소 반환 아무것도 안적으면 배열복사
+
+arr.concat(arr2,aar3) //합쳐서 배열반환
+
+let arr = ["Mike","Tom","Jane"];
+
+arr.forEach((name,index)=>{
+  console.log(`${index+1}. ${name}`); //인덱스 번호 1씩 증가출력
+});
+
+arr.indexOf(n) // n이 위치한 인덱스 번호 반환
+arr.indexOf(n,m) // n이 위치한 인덱스 번호를 m번 인덱스부터 찾음
+arr.lastIndexOf(n) // 끝에서부터 n을 찾음
+
+arr.includes(n) // 배열에 n을 포함하는지 확인 true false
+
+arr.find(함수식가능)
+arr.findIndex(함수식가능) //주의점 첫번째 true 값만 반환하고 끝남
+
+arr.filter() // 조건을 만족하는 모든 인덱스를 배열로 만듬
+
+const arr = [1,2,3,4,5,6];
+
+const result = arr.filter((item) =>{ // item은 사용자 지정 이름
+  return item%2 ===0;
+});
+
+console.log(result);
+
+arr.reverse()//역순 정렬
+
+let userList = [
+  { name: "Mike" , age : 30},
+  { name: "Jane" , age : 27},
+  { name: "Tom" , age : 10},
+];
+
+let newUserList = userlist.map((user,index) => {
+  return Object.assign({},user {//user 사용자 지정 이름
+    id: index+1,
+    isAdult: user.age >19,
+  });
+});
+
+console.log(newUserList);
+
+let arr = ["안녕","나는","철수야"];
+
+let result = arr.join(" ")//공백으로 합침 아무것도 안넣으면 , 로 합침
+
+let str = "Hello, My name is Mike."
+
+let result = arr.split(",")//쉼표를 기준으로 배열요소들로 나눔
+
+//Array.isArray() 배열인지 확인
+
+console.log(Array.isArray(user));//user가 배열인지 확인
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
