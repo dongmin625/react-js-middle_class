@@ -1,0 +1,56 @@
+//setTimout/setInterval
+
+function fn(){
+  console.log(3)
+}
+
+setTimeout(fn,3000); //fn:일정시간이 지난뒤 실행하는 함수 3000 : 3초
+
+function showName(name){
+  console.log(name);
+}
+
+setTimeout(showName,3000,'인수');
+
+
+const tId=function showName(name){
+            console.log(name);
+          }
+
+setTimeout(showName,3000,'인수');
+clearTimeout(tId); //실행을 멈춤 
+
+setInterval(fn,3000)//3초마다 fn을 실행
+
+function showName(name){
+  console.log(name);
+}
+
+const tId = setInterval(showName,3000,'Mike');
+//중단 clearInterval(tId);
+
+
+let num =0;
+
+function showTime(){
+  console.log(`안녕하세요. 접속하신지 ${num++}초가 지났습니다.`);
+  if(num>5){
+    clearInterval(tId);
+  }
+}
+
+const tId = setInterval(showTime,1000);
+
+
+
+
+
+
+
+
+
+
+
+
+
+
