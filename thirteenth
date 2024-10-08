@@ -1,0 +1,68 @@
+const mike ={
+  name: "Mike",
+}
+
+const tom = {
+  name: "Tom",
+}
+
+function showThisName(){
+  console.log(this.name);
+}
+
+showThisName.call(mike); //첫번째 매개변수는 this로 설정할 것 
+
+function update(birthYear, occupation){
+  this.brithYear = birthYear;
+  this.occupation = occupation;
+};
+
+update.call(mike,1999,"singer");//두번째 매개변수 부터는 함수가 사용할 매개변수를 적은것
+update.call(tom,2002,"teacher");
+
+update.apply(mike,[1999,"singer"]);
+update.apply(tom,[2002,"teacher"]);//call과 동작 동일 apply는 매개변수를 배열로 받음
+
+const nums =[3,10,1,6,4];
+const minNum = Math.min(...nums);
+const maxNum = Math.max(...nums);//그냥nums로는 안됨
+
+const minNum =Math.min.apply(null,nums);
+const minMax =Math.max.apply(null,nums);
+
+
+
+const mike ={
+  name: "Mike",
+}
+
+function update(birthYear, occupation){
+  this.brithYear = birthYear;
+  this.occupation = occupation;
+};
+
+const updateMike = update.bind(mike);//this 값을 영구히 바꿈 
+//첫번째 파라미터 this로 사용할 객체 두번째 고정할 파라미터 들
+
+updateMike(1980,"police");//mike 객체 만들어짐
+
+const user = {
+  name : 'Mike',
+  showName : function (){
+  console.log(`hello, ${this.name}`);
+  },
+};
+
+user.showName(); // 
+
+
+
+
+
+
+
+
+
+
+
+
