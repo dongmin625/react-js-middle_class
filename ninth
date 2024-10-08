@@ -1,0 +1,30 @@
+//구조 분해 할당
+let users = ['Mike','Tom','Jane']
+
+let [user1, user2, user3] = users; //순서대로 할당
+
+let [user1, user2, user3] = str.split('-');
+
+let [a,b,c] = [1,2]; // c = undefined
+let [a=3, b=4, c=5] = [1,2]; // a:1 b:2 c:5
+
+let[user1, ,user2] = ['Mike','Tom','Jane','Tony'];//2,4번째 요소 무시됨
+
+//a,b 두개의 값 변경 
+//원래 정석으로는 c라는 의미 없는 값을 만들고 c=a , a=b , b=c 를 할당하여 값을 바꿈
+[a,b]=[b,a];로 간단 하게 바꿀수 있음
+
+let user = {name: 'Mike', age:30};
+
+let {name, age} =user; //let name = user.name; , let age = user.age; ,name과 age의 순서 상관(x)
+
+let {name:userName, age: userAge} =user; //프로퍼티 이름변경 가능
+
+let {name, age, gender = 'male'} = user;
+
+//객체로 부터 받은값이 undifined 일때만 default 값이 사용됨
+
+
+
+
+
