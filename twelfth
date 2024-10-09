@@ -1,4 +1,4 @@
-//setTimout/setInterval
+//setTimout,clearTimeout /setInterval,clearsetInterval
 
 function fn(){
   console.log(3)
