@@ -1,4 +1,4 @@
-//Generator
+//Generator 제너레이터는 다른 작업을 하다가 다시 돌아와서 next()해주면 진행이 멈췄던 부분 부터 이어서 실행
 //next(),return(),throw()
 
 //Generator 는  iterable 하다
