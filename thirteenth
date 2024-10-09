@@ -10,22 +10,26 @@ function showThisName(){
   console.log(this.name);
 }
 
-showThisName.call(mike); //첫번째 매개변수는 this로 설정할 것 
+showThisName.call(mike); 
+//첫번째 매개변수는 this로 설정할 것 
 
 function update(birthYear, occupation){
   this.brithYear = birthYear;
   this.occupation = occupation;
 };
 
-update.call(mike,1999,"singer");//두번째 매개변수 부터는 함수가 사용할 매개변수를 적은것
+update.call(mike,1999,"singer");
+//두번째 매개변수 부터는 함수가 사용할 매개변수를 적은것
 update.call(tom,2002,"teacher");
 
 update.apply(mike,[1999,"singer"]);
-update.apply(tom,[2002,"teacher"]);//call과 동작 동일 apply는 매개변수를 배열로 받음
+update.apply(tom,[2002,"teacher"]);
+//call과 동작 동일 apply는 매개변수를 배열로 받음
 
 const nums =[3,10,1,6,4];
 const minNum = Math.min(...nums);
-const maxNum = Math.max(...nums);//그냥nums로는 안됨
+const maxNum = Math.max(...nums);
+//그냥nums로는 안됨(나머지 매개변수)
 
 const minNum =Math.min.apply(null,nums);
 const minMax =Math.max.apply(null,nums);
@@ -53,7 +57,8 @@ const user = {
   },
 };
 
-user.showName(); // 
+user.showName(); // 계속 Mike
+//바꾸는 방법은 다시 bind 를 다른걸로 지정
 
 
 
