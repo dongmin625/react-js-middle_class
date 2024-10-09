@@ -1,0 +1,47 @@
+//Generator
+//next(),return(),throw()
+
+//Generator 는  iterable 하다
+//Symbol.iterator메서드가 있고 Symbol.iterator 는 iterator를 반환해야한다.
+
+//iterator
+//next 메서드를 가진다.
+//next 메서드는 value와 done 속성을 가진 객체를 반환한다.
+//작업이 끝나면 done은 true가 된다.
+
+
+function* fn(){ //next()에 인수전달
+  const num1 = yield "첫번째 숫자를 입력해주세요";
+//next()에 인수전달
+  console.log(num1);
+
+  const num2 = yield "두번째 숫자를 입력해주세요";
+//next()에 인수전달
+  console.log(num2);
+
+  return num1+num2;
+}
+
+const a = fn();
+
+function* fn(){
+  let index =0;
+  while (true){
+    yield index++; //Generator는 값을 미리 만들어 두지 않음
+  }
+}
+
+const a =fn();
+
+
+
+
+
+
+
+
+
+
+
+
+
