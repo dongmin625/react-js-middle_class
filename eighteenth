@@ -27,10 +27,10 @@ const a = fn();
 function* fn(){
   let index =0;
   while (true){
-    yield index++; //Generator는 값을 미리 만들어 두지 않음
+    yield index++; 
   }
 }
-
+//Generator는 값을 미리 만들어 두지 않음
 const a =fn();
 
 
