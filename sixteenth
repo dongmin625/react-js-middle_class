@@ -1,0 +1,85 @@
+//프로미스
+
+const pr = new Promise((resolve,reject)=> {
+  setTimeout(()=>{
+    reject(new Error("err...."))
+  //resolve("OK");
+  },1000);
+});
+
+console.log("시작");
+pr.then(()=>{
+  console.log(result);
+})
+  .catch((err)=>{
+    console.log(err);
+  })
+  .finally(()=>{ //항상표시
+    console.log("끝");
+  });
+
+
+const f1 = () =>{
+  return new Promise(res,rej) =>{
+    setTimeout(() =>{
+      res("1번 주문완료");
+    },1000);
+  };
+};
+const f2 = () =>{
+  return new Promise(res,rej) =>{
+    setTimeout(() =>{
+      res("2번 주문완료");
+    },1000);
+  };
+};
+
+//Promise.all() 한꺼번에 사용 모두 실행되면 값을 이행 ->시간 단축 but 하나라도 실패시 그냥 error
+Promise.all([f1(),f2(),f3()]).then((res)=>{//배열로 들어감
+  console.log(res);
+  console.timeEnd("x");//시간 측정
+});
+
+//Promise.race() 하나라도 완료되면 끝냄
+Promise.race([f1(),f2(),f3()]).then((res)=>{//배열로 들어감
+  console.log(res);
+  console.timeEnd("x");//시간 측정
+});
+
+
+
+const f3 = () =>{
+  return new Promise(res,rej) =>{
+    setTimeout(() =>{
+      res("3번 주문완료");
+    },1000);
+  };
+};
+
+console.log('시작');
+f1()
+.then((res)=>f2(res)) //프로미스 체인
+.then((res)=>f3(res))
+.then((res)=> console.log(res));
+.catch(console.log)
+.finally(()=>{
+  console.log("끝");
+});
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
+
