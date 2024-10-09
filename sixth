@@ -20,7 +20,7 @@ if(desc.indexOf('Hi')){
 
 if(desc.indexOf('Hi')>-1){//중요!!!
   console.log('Hi가 포함된 문장입니다.')
-}//false
+}//true
 
 //문자열 슬라이스 n<= x <m 반환
 str.slice(n,m); 
