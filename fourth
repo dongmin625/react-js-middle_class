@@ -1,9 +1,9 @@
 //심볼 (유일성 보장)
 const a = Symbol();
-id.discription; //으로 이름 알수있다
+id.description; //으로 이름(설명자) 알수있다
 
 //두개 다름 (!===)
-const id = Symbol('id');
+const id = Symbol('id'); //'id' 설명자
 const id2 = Symbol('id');
 
 
@@ -11,8 +11,9 @@ const id = Symbol('id');
 const user = {
   name: 'Mike',
   age : 30,
-  [id] : 'myid'
+  [id] : 'myid'  //Symbol에 myid 저장
 } 
+
 Object.values(user);
 Object.entries(user);
 Object.keys(user);  
