@@ -12,10 +12,12 @@
 
 function* fn(){ //next()에 인수전달
   const num1 = yield "첫번째 숫자를 입력해주세요";
+
 //next()에 인수전달
   console.log(num1);
 
   const num2 = yield "두번째 숫자를 입력해주세요";
+
 //next()에 인수전달
   console.log(num2);
 
@@ -33,7 +35,7 @@ function* fn(){
 //Generator는 값을 미리 만들어 두지 않음
 const a =fn();
 
-
+//yield 키워드는 제너레이터 함수 내에서 사용되며, yield가 호출되면 함수의 실행이 중단되고 해당 값이 반환됩니다.
 
 
 
