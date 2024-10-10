@@ -6,6 +6,8 @@ let num =10;
 num.toString(); //"10"
 num.toString(2); //"1010"
 
+// 8넣으면 8진수도 가능(2~36까지 가능)
+
 let num2 = 255
 num2.toString(16); //ff
 
@@ -14,6 +16,12 @@ Math.Pi; //원주율
 Math.ceil()//올림
 Math.floor()//내림
 Math.round() //반올림
+Math.random() //0~1렌덤 뽑기
+Math.max() //최댓값
+Math.min() //최솟값
+Math.abs() //절댓값
+Math.pow() //제곱 
+Math.sqrt() //제곱근
 
 //ex) 
 let userRate = 30.1234;
@@ -21,6 +29,8 @@ let userRate = 30.1234;
 
 Math.round(userRate * 100)/100
 userRate.toFixed(2); //주의! 문자열을 반환
+parseInt() // 문자열을 정수로 변환할 때 사용합니다.
+parseFloat() // 문자열을 부동 소수점 숫자로 변환할 때 사용합니다.
 
 let x = number('x');//NaN = Not a Number
 x==NaN//false
@@ -32,17 +42,13 @@ isNaN(3)//false
 
 let margin = '10px';
 
-parseInt(margin);//10 
 Number(margin);//NaN
 
 let redColor = 'f3' //숫자로 시작하지 않으면 NaN 반환
 
-parseFloat() //부동소수점 반환
 
-Math.random() //0~1렌덤 뽑기
-Math.floor()//소수점 이하 버리기
-Math.max() , Math.min()
-Math.abs() , Math.pow() , Math.sqrt()
+
+
 
 
 
