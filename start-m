@@ -28,3 +28,26 @@ if(age>19){
   var txt = '성인';//var는 함수 밖에서 사용가능(함수 스코프) but let,const는 불가능(블록 스코프)
 }
 console.log(txt);
+
+//예시
+
+if (true) {
+    var x = 10;
+}
+console.log(x); // 출력: 10 (블록 밖에서도 접근 가능)
+
+function example() {
+    var y = 20; //함수 내부에서 선언된 var 변수는 그 함수 외부에서 접근할 수 없습니다.
+}
+console.log(y); // 오류: y는 함수 스코프에만 존재함
+
+
+if (true) {
+    let a = 10;
+    const b = 20; //이는 블록({}) 내부에서 선언된 경우, 그 블록 내부에서만 유효하다는 뜻입니다.
+}
+console.log(a); // 오류: a는 블록 스코프 내에서만 유효함
+console.log(b); // 오류: b는 블록 스코프 내에서만 유효함
+
+
+
