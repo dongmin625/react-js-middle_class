@@ -14,9 +14,9 @@ const user = {
   [id] : 'myid'  //Symbol에 myid 저장
 } 
 
-Object.values(user);
-Object.entries(user);
-Object.keys(user);  
+Object.values(user); // 값반환
+Object.keys(user); // 키반환
+Object.entries(user); // 키.값 반환
 for(let a in user){} // 이것들 써도 Symbol 안나옴
 
 //Symbol.for() 전역 심볼
