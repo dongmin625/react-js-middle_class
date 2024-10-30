@@ -3,7 +3,9 @@
 const user = {
   name:'Mike'
 }
-user.hasOwnProperty() // ->있으면 ture 없으면 false
+user.hasOwnProperty(name); // (true) ->있으면 ture 없으면 false
+user.hasOwnProperty(toString); //false 
+//toString은 자바스크립트에서 모든객체가 프로토타입으로 상속받음
 
 const car = {
   wheels : 4,
@@ -28,7 +30,7 @@ const audi = {
 
 bmw.__proto__=car;// bmw가 car를 상속
 benz.__proto__=car;//car가 benz의 프로토 타입이됨
-audi.__proto__=car;
+audi.__proto__=car;//권장하는 방법은 아님님
 
 const x6{
   color: "white",
@@ -49,7 +51,7 @@ const Bmw = function (color){
   this.color =color;
 };
 
-Bmw.prototype.wheels =4;//prototype을 사용하면 중복 코드 줄이기 가능
+Bmw.prototype.wheels =4;//prototype을 사용하면 중복 코드 줄이기 가능 Bmw 생성자 함수의 프로토타입에 추가한 것입니다.
 Bmw.prototype.drive = function(){
   console.log("dirve..");
 }
