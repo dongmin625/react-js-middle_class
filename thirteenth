@@ -10,7 +10,7 @@ function showThisName(){
   console.log(this.name);
 }
 
-showThisName.call(mike); 
+showThisName.call(mike); //call은 특정 객체(여기선 mike)를 this로 지정 할 수 있게 해줌
 //첫번째 매개변수는 this로 설정할 것 
 
 function update(birthYear, occupation){
@@ -45,7 +45,7 @@ function update(birthYear, occupation){
   this.occupation = occupation;
 };
 
-const updateMike = update.bind(mike);//this 값을 영구히 바꿈 
+const updateMike = update.bind(mike); //this 값을 영구히 바꿈 
 //첫번째 파라미터 this로 사용할 객체 두번째 고정할 파라미터 들
 
 updateMike(1980,"police");//mike 객체 만들어짐
