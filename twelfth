@@ -1,4 +1,4 @@
-//setTimout,clearTimeout /setInterval,clearsetInterval
+//setTimout : 설정,clearTimeout:해제 /setInterval:설정,clearsetInterval:해제
 
 function fn(){
   console.log(3)
